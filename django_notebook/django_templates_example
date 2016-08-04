@@ -1,0 +1,15 @@
+# IPython log file
+
+get_ipython().magic(u'logstart django_templates_example -o')
+get_ipython().magic(u'pinfo %logstart')
+from django.template import Template, Context
+# Usamos este comando para importar os template e o Context do django 
+template = Template("Bem vindo: {{ usuario }}")
+# criamos como sera exibido o contexto, isto ira simular como, vai aparecer no template do django
+context = Context({"usuario": "Anderson"}) # Observe que o contexto recebe um dicionario e este sera renderizado no template
+print(template.render(context))
+# Ele substituiu o usuario para o template 
+template = Template("Bem vindo: {{ usuario|lower }}") # fazendo testes usando filtros 
+print(template.render(context))
+# observe que ele mudou para letras minusculas. 
+exit()

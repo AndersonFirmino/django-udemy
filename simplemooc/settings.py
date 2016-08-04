@@ -37,6 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
 
+    # Extra apps
+    'django_extensions', # run python manage.py shell_plus :)
+
     # my apps
     'simplemooc.core',
 )
