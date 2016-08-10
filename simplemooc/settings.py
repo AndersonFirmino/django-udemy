@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 """
 Django settings for simplemooc project.
 
@@ -38,10 +39,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
 
     # Extra apps
-    'django_extensions', # run python manage.py shell_plus :)
+    'django_extensions',  # run python manage.py shell_plus :)
 
     # my apps
     'simplemooc.core',
+    'simplemooc.courses',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -73,7 +75,7 @@ DATABASES = {
 
 LANGUAGE_CODE = 'pt-br'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'America/Sao_Paulo'
 
 USE_I18N = True
 
@@ -86,3 +88,6 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# O media root é util para que voce crie configurações de upload de arquivos
+MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')

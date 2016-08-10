@@ -30,6 +30,7 @@ pathlib2==2.1.0
 pep8==1.7.0
 pexpect==4.2.0
 pickleshare==0.7.3
+Pillow==3.3.0
 prompt-toolkit==1.0.3
 ptyprocess==0.5.1
 pycodestyle==2.0.0
