@@ -91,3 +91,4 @@ STATIC_URL = '/static/'
 
 # O media root é util para que voce crie configurações de upload de arquivos
 MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')
+MEDIA_URL = '/media/'  # esta constante é referente aos arquivos de media, que foram feito uploads pelo usuario
