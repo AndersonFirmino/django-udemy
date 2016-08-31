@@ -92,3 +92,24 @@ STATIC_URL = '/static/'
 # O media root é util para que voce crie configurações de upload de arquivos
 MEDIA_ROOT = os.path.join(BASE_DIR, 'simplemooc', 'media')
 MEDIA_URL = '/media/'  # esta constante é referente aos arquivos de media, que foram feito uploads pelo usuario
+
+# envio de emails.
+# EMAIL BACKEND
+# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend' # back end para o console.
+# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # back end para o gmail
+# DEFAULT_FROM_EMAIL = 'Nome <email@gmail.com>'
+# EMAIL_USE_TLS = True
+# EMAIL_HOST = 'smtp.gmail.com'
+# EMAIL_HOST_USER = 'email@gmail.com'
+# EMAIL_HOST_PASSWORD = 'senha'
+# EMAIL_PORT = 587
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # com este cara a gente faz um email de teste no console.
+DEFAULT_FROM_EMAIL = 'nome <email@gmail.com>'
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'email@gmail.com'
+EMAIL_HOST_PASSWORD = 'senha'
+EMAIL_PORT = 587
+
+CONTACT_EMAIL = 'anderson.araujoprog@gmail.com'

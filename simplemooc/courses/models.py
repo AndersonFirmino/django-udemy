@@ -16,6 +16,7 @@ class Course(models.Model):
     slug = models.SlugField("Atalho")
     # dizendo que este campo abaixo não é obrigatorio
     description = models.TextField('Descrição', blank=True)
+    about = models.TextField('Sobre o curso', blank=True)
     start_date = models.DateField('Data de Inicio', null=True, blank=True)
     image = models.ImageField(
             upload_to='courses/images', verbose_name='Imagem',
@@ -30,6 +31,10 @@ class Course(models.Model):
     # isto é util para corrigir a apresentação deste models no django admin
     def __str__(self):
         return self.name
+
+    @models.permalink
+    def get_absolute_url(self):
+        return ('courses:details', (), {'slug': self.slug})
 
     class Meta:
         """Esta classe altera como os dados serão exibidos no django Admin"""
