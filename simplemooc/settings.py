@@ -25,7 +25,7 @@ DEBUG = True
 
 TEMPLATE_DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -43,7 +43,9 @@ INSTALLED_APPS = (
 
     # my apps
     'simplemooc.core',
+    'simplemooc.accounts',
     'simplemooc.courses',
+
 )
 
 MIDDLEWARE_CLASSES = (
@@ -113,3 +115,9 @@ EMAIL_HOST_PASSWORD = 'senha'
 EMAIL_PORT = 587
 
 CONTACT_EMAIL = 'anderson.araujoprog@gmail.com'
+
+# Auth Configs
+
+LOGIN_URL = 'accounts:login'
+LOGIN_REDIRECT_URL = 'core:home'
+LOGOUT_URL = 'accounts:logout'
