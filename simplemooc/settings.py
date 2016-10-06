@@ -11,8 +11,8 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 import os
-BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
+BASE_DIR = os.path.dirname(os.path.dirname(__file__))
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.6/howto/deployment/checklist/
@@ -26,7 +26,6 @@ DEBUG = True
 TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = ['*']
-
 
 # Application definition
 
@@ -61,7 +60,6 @@ ROOT_URLCONF = 'simplemooc.urls'
 
 WSGI_APPLICATION = 'simplemooc.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/1.6/ref/settings/#databases
 
@@ -85,7 +83,6 @@ USE_L10N = True
 
 USE_TZ = True
 
-
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
@@ -106,7 +103,7 @@ MEDIA_URL = '/media/'  # esta constante é referente aos arquivos de media, que 
 # EMAIL_HOST_PASSWORD = 'senha'
 # EMAIL_PORT = 587
 
-EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # com este cara a gente faz um email de teste no console.
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # com este cara a gente faz um email de teste no console.
 DEFAULT_FROM_EMAIL = 'nome <email@gmail.com>'
 EMAIL_USE_TLS = True
 EMAIL_HOST = 'smtp.gmail.com'

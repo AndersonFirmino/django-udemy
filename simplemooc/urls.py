@@ -9,15 +9,16 @@ from django.conf.urls.static import static
 
 admin.autodiscover()
 
-urlpatterns = patterns('',
+urlpatterns = patterns(
+    '',
     # Examples:
     # url(r'^$', 'simplemooc.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^', include('simplemooc.core.urls', namespace="core")),
-    url(r'^conta/', include('simplemooc.accounts.urls', namespace="accounts")),  
+    url(r'^conta/', include('simplemooc.accounts.urls', namespace="accounts")),
     url(r'^cursos/', include('simplemooc.courses.urls', namespace="courses")),
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^admin/', include(admin.site.urls))
 )
 
 # se estiver no ambiente de teste carrega os arquivos de media deste ambiente
