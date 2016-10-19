@@ -89,3 +89,6 @@ udemy-simple-mooc
 
 # Rope project settings
 .ropeproject
+
+# PyCharm
+.idea
